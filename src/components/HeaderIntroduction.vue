@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex flex-col justify-center my-auto items-start w-full h-[100vh] md:p-20 p-10 font-light"
+    class="flex flex-col justify-center my-auto items-start w-full h-[100vh] md:py-20 py-10 md:px-52 px-8 font-light"
   >
     <h1 class="text-2xl md:text-2xl lg:text-4xl xl:text-6xl">{{ title }}</h1>
     <h2
@@ -19,7 +19,7 @@
       Get in touch
       <span
         @click="openEmail"
-        class="underline hover:bg-blue-400 transition-all ease-in duration-200 cursor-pointer hover:text-white"
+        class="underline hover:bg-blue-theme transition-all ease-in duration-200 cursor-pointer hover:text-white"
         >{{ email }}</span
       >
     </h3>
@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import ButtonOutline from "./reusable/ButtonOutline.vue";
+import ButtonOutline from "@/components/reusable/ButtonOutline.vue";
 const title = "Hello! 👋";
 const subtitle =
   "I am <b>Yulianto Ardi N</b>, an aspiring front-end software engineer with a keen interest in crafting visually appealing interfaces and creating engaging user experiences. 💕";

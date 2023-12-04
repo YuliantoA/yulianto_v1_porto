@@ -8,10 +8,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faFilePdf } from '@fortawesome/free-regular-svg-icons'
+import { faFilePdf,faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add(faGithub,faFilePdf)
+library.add(faGithub,faFilePdf,faEnvelope)
 
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

@@ -4,7 +4,7 @@
   >
     <div
       id="card"
-      class="md:w-11/12 w-full flex flex-col items-start justify-around gap-10"
+      class="md:w-full w-full flex flex-col items-start justify-around gap-10"
       :class="[cardBreakpoint + ':flex-row']"
     >
       <div
@@ -13,7 +13,7 @@
         <span>{{ title }}</span>
       </div>
       <div
-        class="w-11/12 lg:w-9/12"
+        class="w-full lg:w-9/12"
         :class="[cardBreakpoint === 'md' ? 'md:w-8/12' : '']"
         :="$attrs"
       >
