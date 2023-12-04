@@ -3,7 +3,7 @@
     <div
       v-for="({ university, role, tanggal }, index) in listExperience"
       :key="index"
-      class="w-full flex lg:flex-row flex-col justify-between mb-5 xl:text-xl lg:text-lg md:text-md text-base gap-5"
+      class="w-full flex lg:flex-row flex-col justify-between mb-5 xl:text-xl lg:text-lg md:text-md text-base md:gap-5 gap-0"
     >
       <div>
         <div class="font-semibold capitalize">
