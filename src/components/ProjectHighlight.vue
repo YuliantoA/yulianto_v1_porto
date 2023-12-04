@@ -3,31 +3,42 @@
     title="Featured Project"
     class="text-left flex flex-col justify-between gap-20"
   >
-    <div
-      class="w-full flex justify-between gap-10"
+    <template
       v-for="(
-        { title, description, img, linkGit, linkDemo }, index
+        { title, description, img, linkGit, linkDemo, techStack }, index
       ) in listProject"
       :key="index"
     >
-      <div class="w-9/12">
-        <img class="w-full" :src="img" />
-      </div>
-      <div class="w-3/12 flex flex-col justify-start items-start gap-5">
-        <div class="font-bold capitalize">
-          <span>
-            {{ title }}
-          </span>
+      <div class="w-full flex justify-between gap-10">
+        <div class="w-9/12">
+          <img class="w-full" :src="img" />
         </div>
-        <p class="font-light text-base">{{ description }}</p>
-        <ButtonOutline
-          title="Github"
-          :icon="['fab', 'github']"
-          @click="openLink(linkGit)"
-        />
-        <ButtonOutline title="Demo" @click="openLink(linkDemo)" />
+        <div class="w-3/12 flex flex-col justify-start items-start gap-5">
+          <div class="font-bold capitalize">
+            <span>
+              {{ title }}
+            </span>
+          </div>
+          <p class="font-light text-base">{{ description }}</p>
+          <ButtonOutline
+            title="Github"
+            :icon="['fab', 'github']"
+            @click="openLink(linkGit)"
+          />
+          <ButtonOutline title="Demo" @click="openLink(linkDemo)" />
+        </div>
       </div>
-    </div>
+      <section class="flex flex-wrap gap-x-10 gap-y-2">
+        <template v-for="(tech, index) in techStack" :key="index">
+          <div v-if="index % 5 === 0" class="basis-full h-0"></div>
+          <div
+            class="border p-2 text-blue-theme border-blue-theme font-semibold text-sm"
+          >
+            <span>{{ tech }}</span>
+          </div>
+        </template>
+      </section>
+    </template>
   </CenterCard>
 </template>
 
@@ -43,6 +54,19 @@ const listProject = [
     img: new URL("/src/assets/images/kajiankuy.png", import.meta.url),
     linkGit: "https://github.com/YuliantoA/porto",
     linkDemo: "https://kajiankuy.netlify.app/",
+    techStack: [
+      "Vue Js",
+      "Tailwind Css",
+      "Firebase",
+      "axios",
+      "Vue-Router",
+      "Pinia",
+      "font-awesome",
+      "vue3-toastify",
+      "vue-multiselect",
+      "vuelidate",
+      "vueuse",
+    ],
   },
   {
     title: "Quiz Lieur",
@@ -51,6 +75,17 @@ const listProject = [
     img: new URL("/src/assets/images/quizlieur.png", import.meta.url),
     linkGit: "https://github.com/YuliantoA/quiz",
     linkDemo: "https://quizlieur.netlify.app/",
+    techStack: [
+      "Vue Js",
+      "Tailwind Css",
+      "axios",
+      "Vue-Router",
+      "Pinia",
+      "font-awesome",
+      "vue3-toastify",
+      "vue-multiselect",
+      "vuelidate",
+    ],
   },
 ];
 
