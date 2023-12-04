@@ -12,7 +12,7 @@
         <span>{{ title }}</span>
       </div>
       <div
-        class="w-11/12 md:w-8/12 lg:w-9/12 lg:text-lg md:text-md text-base"
+        class="w-11/12 md:w-8/12 lg:w-9/12 lg:text-xl md:text-lg text-md"
         :="$attrs"
       >
         <slot></slot>
