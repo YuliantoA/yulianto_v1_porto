@@ -1,21 +1,21 @@
 <template>
   <header
-    class="flex flex-col justify-around my-auto items-start w-full h-[100vh] p-52 font-light"
+    class="flex flex-col justify-center my-auto items-start w-full h-[100vh] md:p-20 p-10 font-light"
   >
-    <h1 class="text-6xl">{{ title }}</h1>
+    <h1 class="text-2xl md:text-2xl lg:text-4xl xl:text-6xl">{{ title }}</h1>
     <h2
-      class="text-5xl text-left w-7/12 text leading-relaxed"
+      class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-left md:w-7/12 sm:w-6/12 w-full text md:leading-normal lg:leading-normal xl:leading-normal py-20"
       v-html="subtitle"
     ></h2>
-    <div class="w-2/12">
+    <div class="pb-10">
       <ButtonOutline
         @click="downloadCv"
-        class="p-4 text-2xl"
+        class="md:p-4 p-2 text-sm sm:text-base md:text-md lg:text-lg xl:text-xl"
         title="Download CV"
         :icon="['far', 'file-pdf']"
       />
     </div>
-    <h3 class="text-3xl">
+    <h3 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl">
       Get in touch
       <span
         @click="openEmail"
