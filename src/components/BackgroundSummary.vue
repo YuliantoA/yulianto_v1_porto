@@ -2,7 +2,7 @@
   <CenterCard title="background">
     <p class="flex flex-col gap-10 font-light tracking-wider leading-9">
       <span>
-        I'm ex Software Engineer at <b>Bank Indonesia</b> building things for
+        I'm ex Software Engineer at <b>Bank Indonesia</b>, building things for
         the web and desktop with some awesome people. I'am best graduated
         Informatic Engineering from
         <b>Institut Teknologi Nasional Bandung</b> after completing an awesome

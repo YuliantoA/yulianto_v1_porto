@@ -1,6 +1,6 @@
 <template>
   <section class="w-full h-full flex items-center justify-center p-40">
-    <card class="w-9/12 flex items-start justify-center text-xl">
+    <div id="card" class="w-9/12 flex items-start justify-center text-xl">
       <div
         class="w-3/12 text-right tracking-widest text-blue-theme font-bold uppercase mr-auto"
       >
@@ -10,7 +10,7 @@
         <slot></slot>
       </div>
       <div class="w-1/12"></div>
-    </card>
+    </div>
   </section>
 </template>
 

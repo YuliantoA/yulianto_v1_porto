@@ -9,14 +9,16 @@
     ></h2>
     <div class="w-2/12">
       <ButtonOutline
+        @click="downloadCv"
         class="p-4 text-2xl"
         title="Download CV"
-        :icon="['fab', 'github']"
+        :icon="['far', 'file-pdf']"
       />
     </div>
     <h3 class="text-3xl">
       Get in touch
       <span
+        @click="openEmail"
         class="underline hover:bg-blue-400 transition-all ease-in duration-200 cursor-pointer hover:text-white"
         >{{ email }}</span
       >
@@ -29,5 +31,17 @@ import ButtonOutline from "./reusable/ButtonOutline.vue";
 const title = "Hello! 👋";
 const subtitle =
   "I am <b>Yulianto Ardi N</b>, an aspiring front-end software engineer with a keen interest in crafting visually appealing interfaces and creating engaging user experiences. 💕";
-const email = "yuliantoardin@gmail.com";
+
+const email = import.meta.env.VITE_APP_EMAIL;
+const cv = import.meta.env.VITE_APP_CV;
+function downloadCv() {
+  let link = document.createElement("a");
+  link.href = "/files/" + cv;
+  link._target = "blank";
+  link.click();
+}
+
+function openEmail() {
+  window.open("mailto:" + email, "_blank", "noreferrer");
+}
 </script>

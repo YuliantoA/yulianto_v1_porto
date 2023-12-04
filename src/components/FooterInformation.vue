@@ -12,7 +12,7 @@
         <div
           v-for="({ title, link }, index) in listContact"
           :key="index"
-          @click=""
+          @click="openLink(link)"
           class="cursor-pointer hover:animate-wiggle hover:underline hover:underline-offset-4 uppercase"
         >
           {{ title }}
@@ -23,14 +23,19 @@
 </template>
 
 <script setup>
+const email = import.meta.env.VITE_APP_EMAIL;
+const gitUrl = import.meta.env.VITE_APP_GITURL;
 const listContact = [
   {
     title: "email",
-    link: "asd",
+    link: "mailto:" + email,
   },
   {
     title: "github",
-    link: "asd",
+    link: gitUrl,
   },
 ];
+function openLink(url) {
+  window.open(url, "_blank", "noreferrer");
+}
 </script>
