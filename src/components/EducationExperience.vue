@@ -1,9 +1,9 @@
 <template>
-  <CenterCard title="Education" class="text-left flex flex-col">
+  <CenterCard title="Education">
     <div
       v-for="({ university, role, tanggal }, index) in listExperience"
       :key="index"
-      class="flex justify-between mb-5"
+      class="w-full flex lg:flex-row flex-col justify-between mb-5 lg:text-md text-base"
     >
       <div>
         <div class="font-semibold capitalize">
@@ -17,7 +17,7 @@
           </span>
         </div>
       </div>
-      <div class="font-light">
+      <div class="font-light lg:text-md md:text-base text-sm">
         <span>
           {{ tanggal }}
         </span>

@@ -1,6 +1,8 @@
 <template>
   <CenterCard title="background">
-    <p class="flex flex-col gap-10 font-light tracking-wider leading-9">
+    <p
+      class="flex flex-col gap-10 font-light md:tracking-normal lg:tracking-wider lg:leading-9 md:leading-8"
+    >
       <span>
         I'm ex Software Engineer at <b>Bank Indonesia</b>, building things for
         the web and desktop with some awesome people. I'am best graduated

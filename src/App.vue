@@ -11,7 +11,7 @@ import { vScrollReveal } from "vue-scroll-reveal";
 </script>
 
 <template>
-  <div>
+  <div class="w-[100vw]">
     <HeaderIntroduction v-scroll-reveal="{ delay: 100 }" />
     <main>
       <BackgroundSummary v-scroll-reveal="{ delay: 100 }" />
