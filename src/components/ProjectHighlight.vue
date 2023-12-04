@@ -1,7 +1,8 @@
 <template>
   <CenterCard
+    card-breakpoint="lg"
     title="Featured Project"
-    class="text-left flex flex-col justify-between gap-20"
+    class="text-left flex flex-col justify-between lg:gap-20 gap-10 lg:w-full"
   >
     <template
       v-for="(
@@ -9,11 +10,11 @@
       ) in listProject"
       :key="index"
     >
-      <div class="w-full flex justify-between gap-10">
+      <div class="w-full flex lg:flex-row flex-col justify-between gap-10">
         <div class="w-9/12">
           <img class="w-full" :src="img" />
         </div>
-        <div class="w-3/12 flex flex-col justify-start items-start gap-5">
+        <div class="lg:w-3/12 flex flex-col justify-start items-start gap-5">
           <div class="font-bold capitalize">
             <span>
               {{ title }}
@@ -30,7 +31,6 @@
       </div>
       <section class="flex flex-wrap gap-x-10 gap-y-2">
         <template v-for="(tech, index) in techStack" :key="index">
-          <div v-if="index % 5 === 0" class="basis-full h-0"></div>
           <div
             class="border p-2 text-blue-theme border-blue-theme font-semibold text-sm"
           >
