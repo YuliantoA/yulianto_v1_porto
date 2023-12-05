@@ -12,7 +12,7 @@ import { vScrollReveal } from "vue-scroll-reveal";
 
 <template>
   <div class="w-[100vw]">
-    <HeaderIntroduction v-scroll-reveal="{ delay: 100 }" />
+    <HeaderIntroduction />
     <main>
       <BackgroundSummary v-scroll-reveal="{ delay: 100 }" />
       <EducationExperience v-scroll-reveal="{ delay: 100 }" />
@@ -20,7 +20,7 @@ import { vScrollReveal } from "vue-scroll-reveal";
       <WorkExperience v-scroll-reveal="{ delay: 100 }" />
       <ProjectHighlight v-scroll-reveal="{ delay: 100 }" />
     </main>
-    <FooterInformation v-scroll-reveal />
+    <FooterInformation />
   </div>
 </template>
 

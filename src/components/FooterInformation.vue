@@ -10,6 +10,7 @@
       </div>
       <div
         class="w-2/12 flex justify-around items-center text-xl font-semibold text-blue-theme"
+        :class="[isMobile(width) ? ' pb-5 gap-5' : '']"
       >
         <div
           v-for="({ title, link, icon }, index) in listContact"
